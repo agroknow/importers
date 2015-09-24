@@ -1,0 +1,1591 @@
+$export = array();
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-blank_source_1-copy';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'Blank source 1';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:10',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-blank_source_3-default_value';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'Blank source 3';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'World Bank Group',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set value or default value World Bank';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-blank_source_4-copy';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'Blank source 4';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:0',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Copy source value';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_0-find_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:0';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '<![CDATA[',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace <![CDATA[ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_0-find_replace_regex';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:0';
+$feeds_tamper->plugin_id = 'find_replace_regex';
+$feeds_tamper->settings = array(
+  'find' => '/\\n/',
+  'replace' => '',
+  'limit' => '1',
+  'real_limit' => '1',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace new line /\\n/ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_0-required';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:0';
+$feeds_tamper->plugin_id = 'required';
+$feeds_tamper->settings = array(
+  'invert' => 0,
+  'log' => 0,
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Required field';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_0-wfind_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:0';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => ']]>',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Find replace ]]> with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_1-copy';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:1';
+$feeds_tamper->plugin_id = 'copy';
+$feeds_tamper->settings = array(
+  'to_from' => 'from',
+  'source' => 'xpathparser:0',
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Copy source value of title';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_1-find_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:1';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '<![CDATA[',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Find replace <![CDATA[ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_1-find_replaces';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:1';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => ']]>',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace ]]> with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_1-find_replace_regex';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:1';
+$feeds_tamper->plugin_id = 'find_replace_regex';
+$feeds_tamper->settings = array(
+  'find' => ' /\\n/',
+  'replace' => '',
+  'limit' => '1',
+  'real_limit' => '1',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Find replace new line /\\n/ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_1-trim';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:1';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_10-find_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:10';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '<![CDATA[',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace <![CDATA[ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_10-find_replacettt';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:10';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => ']]>',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Find replace ]]> with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_10-trim';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:10';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-explode';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Explode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-find_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '<![CDATA[',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Find replace <![CDATA[ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-find_replacefff';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => ']]>',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Find replace ]]> with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-find_replace_regex';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'find_replace_regex';
+$feeds_tamper->settings = array(
+  'find' => '/\\n/',
+  'replace' => '',
+  'limit' => '1',
+  'real_limit' => '1',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Find replace REGEX';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-keyword_filter';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'keyword_filter';
+$feeds_tamper->settings = array(
+  'words' => 'Advocacy
+agrarian law
+agrarian reform
+agrarian structure
+Agricultural land management
+agricultural landscape
+Agriculture
+agroforestry systems
+Agrofuel
+Agropastoralism
+Alienation (land)
+animal husbandry
+aquaculture
+area
+assessment
+Assignment (land)
+Cadastral administration
+Cadastral register
+Cadastre
+cadastres
+Capacity building
+Capital value (land)
+CEDAW
+Climate change
+co-ownership rights
+Coastal area
+Codification
+Collateral (land)
+collective ownership
+Commercial Pressures on Land
+common law
+Common property
+Common rights
+Commons
+Communal ownership
+Communal territory
+Community
+community forestry
+compensation
+Concession (land)
+Conflict
+Conflict of interest
+contract farming
+Control rights
+Customary land rights
+customary law
+decentraliztion
+Deed
+deforestation
+Desertification
+development
+development agencies
+Disturbance
+Dowry (land)
+Eminent domain
+Encroachment
+Environment
+Estate management
+Eviction
+expropriation
+extensive land use
+Extractive Industries
+Farm tenancy
+Farmers
+farmers associations
+farmers organizations
+Fisheries
+Food Security
+forest conservation
+forest grazing
+Forest law
+forest management plans
+forest monitoring and assessment
+forest regulations
+Forestry
+forestry policies
+Free trade agreements
+Gender
+Geographical information systems
+geomatics
+Governance
+Government purchases
+grazing
+Grazing contracts
+Grazing land rights
+grazing lands
+green belts
+ground rent
+Illegal occupation
+Independent experts
+indigenous lands
+Indigenous Peoples
+indigenous tenure
+Informal property
+inheritance tax
+intensive land use
+investment funds
+land access
+Land acquisition
+land administration
+land clearing
+land concentration
+land conflicts
+land consolidation
+land cover
+land cover mapping
+land degradation
+land development (urbanization)
+Land dispute
+land distribution
+land diversion
+land economics
+land environment
+land grabbing
+land grabs
+land improvement
+land information systems
+land inheritance rights
+land investments
+Land law
+Land loans
+land management
+land markets
+land policies
+land reform
+land registration
+Land rent
+Land Rights
+Land speculation
+land suitability
+land tax
+land tenure
+Land tenure system
+land transfers
+land use mapping
+land use planning
+landlessness
+landowners
+Latifundium
+legal empowerment
+lineage
+Lineage land
+Local community
+Management rights
+Manure contract
+marital property rights
+Matrilineal
+Natural Resource Management
+nature reserves
+Negotiated land reform
+Non indigenous peoples
+Notary
+Occupation
+Open access
+Orphans land rights
+Parcel plan
+Pastoral land rights
+Pastoral lands
+Pastoralists
+Patrilineal
+Perimeter (land)
+Personal property
+Policies and Laws
+Pre-emption rights
+Prescription
+Priest of the land
+Private forests
+private ownership
+Property law
+Property Regulation
+property rights
+protected areas
+public ownership
+rangelands
+Reforms
+Regularization of illegal occupation
+Regularization of ownership
+Research
+right of access
+Right of clearance
+Right of first occupancy
+rights in divorce
+Riparian rights
+rural areas
+Rural Development
+rural planning
+rural population
+Sacred woods
+Scale
+scrublands
+Security of tenure
+Servient tenement
+state forests
+State property
+Statute law
+suburban agriculture
+Surveyors
+sustainable land management
+Tenant farmer
+tenant\'s rights
+tenants
+Territories
+Territory
+Title deed
+Torrens system
+Town and country planning
+Trade
+Transaction costs
+Unclaimed lands
+urban areas
+urban forestry
+urban planning
+urban population
+urbanization
+Use rights
+Waste
+water management
+water management in lowland
+water management in upland
+water rights
+Willing seller
+Women
+zoning
+',
+  'word_boundaries' => 0,
+  'exact' => 0,
+  'case_sensitive' => 0,
+  'invert' => 0,
+  'word_list' => array(
+    0 => 'Advocacy',
+    1 => 'agrarian law',
+    2 => 'agrarian reform',
+    3 => 'agrarian structure',
+    4 => 'Agricultural land management',
+    5 => 'agricultural landscape',
+    6 => 'Agriculture',
+    7 => 'agroforestry systems',
+    8 => 'Agrofuel',
+    9 => 'Agropastoralism',
+    10 => 'Alienation (land)',
+    11 => 'animal husbandry',
+    12 => 'aquaculture',
+    13 => 'area',
+    14 => 'assessment',
+    15 => 'Assignment (land)',
+    16 => 'Cadastral administration',
+    17 => 'Cadastral register',
+    18 => 'Cadastre',
+    19 => 'cadastres',
+    20 => 'Capacity building',
+    21 => 'Capital value (land)',
+    22 => 'CEDAW',
+    23 => 'Climate change',
+    24 => 'co-ownership rights',
+    25 => 'Coastal area',
+    26 => 'Codification',
+    27 => 'Collateral (land)',
+    28 => 'collective ownership',
+    29 => 'Commercial Pressures on Land',
+    30 => 'common law',
+    31 => 'Common property',
+    32 => 'Common rights',
+    33 => 'Commons',
+    34 => 'Communal ownership',
+    35 => 'Communal territory',
+    36 => 'Community',
+    37 => 'community forestry',
+    38 => 'compensation',
+    39 => 'Concession (land)',
+    40 => 'Conflict',
+    41 => 'Conflict of interest',
+    42 => 'contract farming',
+    43 => 'Control rights',
+    44 => 'Customary land rights',
+    45 => 'customary law',
+    46 => 'decentraliztion',
+    47 => 'Deed',
+    48 => 'deforestation',
+    49 => 'Desertification',
+    50 => 'development',
+    51 => 'development agencies',
+    52 => 'Disturbance',
+    53 => 'Dowry (land)',
+    54 => 'Eminent domain',
+    55 => 'Encroachment',
+    56 => 'Environment',
+    57 => 'Estate management',
+    58 => 'Eviction',
+    59 => 'expropriation',
+    60 => 'extensive land use',
+    61 => 'Extractive Industries',
+    62 => 'Farm tenancy',
+    63 => 'Farmers',
+    64 => 'farmers associations',
+    65 => 'farmers organizations',
+    66 => 'Fisheries',
+    67 => 'Food Security',
+    68 => 'forest conservation',
+    69 => 'forest grazing',
+    70 => 'Forest law',
+    71 => 'forest management plans',
+    72 => 'forest monitoring and assessment',
+    73 => 'forest regulations',
+    74 => 'Forestry',
+    75 => 'forestry policies',
+    76 => 'Free trade agreements',
+    77 => 'Gender',
+    78 => 'Geographical information systems',
+    79 => 'geomatics',
+    80 => 'Governance',
+    81 => 'Government purchases',
+    82 => 'grazing',
+    83 => 'Grazing contracts',
+    84 => 'Grazing land rights',
+    85 => 'grazing lands',
+    86 => 'green belts',
+    87 => 'ground rent',
+    88 => 'Illegal occupation',
+    89 => 'Independent experts',
+    90 => 'indigenous lands',
+    91 => 'Indigenous Peoples',
+    92 => 'indigenous tenure',
+    93 => 'Informal property',
+    94 => 'inheritance tax',
+    95 => 'intensive land use',
+    96 => 'investment funds',
+    97 => 'land access',
+    98 => 'Land acquisition',
+    99 => 'land administration',
+    100 => 'land clearing',
+    101 => 'land concentration',
+    102 => 'land conflicts',
+    103 => 'land consolidation',
+    104 => 'land cover',
+    105 => 'land cover mapping',
+    106 => 'land degradation',
+    107 => 'land development (urbanization)',
+    108 => 'Land dispute',
+    109 => 'land distribution',
+    110 => 'land diversion',
+    111 => 'land economics',
+    112 => 'land environment',
+    113 => 'land grabbing',
+    114 => 'land grabs',
+    115 => 'land improvement',
+    116 => 'land information systems',
+    117 => 'land inheritance rights',
+    118 => 'land investments',
+    119 => 'Land law',
+    120 => 'Land loans',
+    121 => 'land management',
+    122 => 'land markets',
+    123 => 'land policies',
+    124 => 'land reform',
+    125 => 'land registration',
+    126 => 'Land rent',
+    127 => 'Land Rights',
+    128 => 'Land speculation',
+    129 => 'land suitability',
+    130 => 'land tax',
+    131 => 'land tenure',
+    132 => 'Land tenure system',
+    133 => 'land transfers',
+    134 => 'land use mapping',
+    135 => 'land use planning',
+    136 => 'landlessness',
+    137 => 'landowners',
+    138 => 'Latifundium',
+    139 => 'legal empowerment',
+    140 => 'lineage',
+    141 => 'Lineage land',
+    142 => 'Local community',
+    143 => 'Management rights',
+    144 => 'Manure contract',
+    145 => 'marital property rights',
+    146 => 'Matrilineal',
+    147 => 'Natural Resource Management',
+    148 => 'nature reserves',
+    149 => 'Negotiated land reform',
+    150 => 'Non indigenous peoples',
+    151 => 'Notary',
+    152 => 'Occupation',
+    153 => 'Open access',
+    154 => 'Orphans land rights',
+    155 => 'Parcel plan',
+    156 => 'Pastoral land rights',
+    157 => 'Pastoral lands',
+    158 => 'Pastoralists',
+    159 => 'Patrilineal',
+    160 => 'Perimeter (land)',
+    161 => 'Personal property',
+    162 => 'Policies and Laws',
+    163 => 'Pre-emption rights',
+    164 => 'Prescription',
+    165 => 'Priest of the land',
+    166 => 'Private forests',
+    167 => 'private ownership',
+    168 => 'Property law',
+    169 => 'Property Regulation',
+    170 => 'property rights',
+    171 => 'protected areas',
+    172 => 'public ownership',
+    173 => 'rangelands',
+    174 => 'Reforms',
+    175 => 'Regularization of illegal occupation',
+    176 => 'Regularization of ownership',
+    177 => 'Research',
+    178 => 'right of access',
+    179 => 'Right of clearance',
+    180 => 'Right of first occupancy',
+    181 => 'rights in divorce',
+    182 => 'Riparian rights',
+    183 => 'rural areas',
+    184 => 'Rural Development',
+    185 => 'rural planning',
+    186 => 'rural population',
+    187 => 'Sacred woods',
+    188 => 'Scale',
+    189 => 'scrublands',
+    190 => 'Security of tenure',
+    191 => 'Servient tenement',
+    192 => 'state forests',
+    193 => 'State property',
+    194 => 'Statute law',
+    195 => 'suburban agriculture',
+    196 => 'Surveyors',
+    197 => 'sustainable land management',
+    198 => 'Tenant farmer',
+    199 => 'tenant\'s rights',
+    200 => 'tenants',
+    201 => 'Territories',
+    202 => 'Territory',
+    203 => 'Title deed',
+    204 => 'Torrens system',
+    205 => 'Town and country planning',
+    206 => 'Trade',
+    207 => 'Transaction costs',
+    208 => 'Unclaimed lands',
+    209 => 'urban areas',
+    210 => 'urban forestry',
+    211 => 'urban planning',
+    212 => 'urban population',
+    213 => 'urbanization',
+    214 => 'Use rights',
+    215 => 'Waste',
+    216 => 'water management',
+    217 => 'water management in lowland',
+    218 => 'water management in upland',
+    219 => 'water rights',
+    220 => 'Willing seller',
+    221 => 'Women',
+    222 => 'zoning',
+    223 => '',
+  ),
+  'regex' => FALSE,
+  'func' => 'mb_stripos',
+);
+$feeds_tamper->weight = 7;
+$feeds_tamper->description = 'Keyword filter';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-required';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'required';
+$feeds_tamper->settings = array(
+  'invert' => 0,
+  'log' => 0,
+);
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Required field';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-strip_tags';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'strip_tags';
+$feeds_tamper->settings = array(
+  'allowed_tags' => '',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Strip tags';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_12-trim';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:12';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_2-find_replace_regex';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:2';
+$feeds_tamper->plugin_id = 'find_replace_regex';
+$feeds_tamper->settings = array(
+  'find' => '/\\n/',
+  'replace' => '',
+  'limit' => '1',
+  'real_limit' => '1',
+);
+$feeds_tamper->weight = 1;
+$feeds_tamper->description = 'Find replace \\n/ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_2-required';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:2';
+$feeds_tamper->plugin_id = 'required';
+$feeds_tamper->settings = array(
+  'invert' => 0,
+  'log' => 0,
+);
+$feeds_tamper->weight = 3;
+$feeds_tamper->description = 'Required field';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_2-strip_tags';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:2';
+$feeds_tamper->plugin_id = 'strip_tags';
+$feeds_tamper->settings = array(
+  'allowed_tags' => '',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Strip tags';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_2-trim';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:2';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 2;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_3-default_value';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:3';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'English',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set default value English';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_4-default_value';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:4';
+$feeds_tamper->plugin_id = 'default_value';
+$feeds_tamper->settings = array(
+  'default_value' => 'en',
+  'only_if_empty' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Set value or default value en';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-explode';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'explode';
+$feeds_tamper->settings = array(
+  'separator' => ',',
+  'limit' => '',
+  'real_separator' => ',',
+);
+$feeds_tamper->weight = 8;
+$feeds_tamper->description = 'Explode';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-find_replace';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => '<![CDATA[',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 6;
+$feeds_tamper->description = 'Find replace <![CDATA[ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-find_replacefff';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'find_replace';
+$feeds_tamper->settings = array(
+  'find' => ']]>',
+  'replace' => '',
+  'case_sensitive' => 0,
+  'word_boundaries' => 0,
+  'whole' => 0,
+  'regex' => FALSE,
+  'func' => 'str_ireplace',
+);
+$feeds_tamper->weight = 7;
+$feeds_tamper->description = 'Find replace ]]> with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-find_replace_regex';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'find_replace_regex';
+$feeds_tamper->settings = array(
+  'find' => '/\\n/',
+  'replace' => '',
+  'limit' => '1',
+  'real_limit' => '1',
+);
+$feeds_tamper->weight = 4;
+$feeds_tamper->description = 'Find replace new line /\\n/ with space';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-keyword_filter';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'keyword_filter';
+$feeds_tamper->settings = array(
+  'words' => 'Advocacy
+agrarian law
+agrarian reform
+agrarian structure
+Agricultural land management
+agricultural landscape
+Agriculture
+agroforestry systems
+Agrofuel
+Agropastoralism
+Alienation (land)
+animal husbandry
+aquaculture
+area
+assessment
+Assignment (land)
+Cadastral administration
+Cadastral register
+Cadastre
+cadastres
+Capacity building
+Capital value (land)
+CEDAW
+Climate change
+co-ownership rights
+Coastal area
+Codification
+Collateral (land)
+collective ownership
+Commercial Pressures on Land
+common law
+Common property
+Common rights
+Commons
+Communal ownership
+Communal territory
+Community
+community forestry
+compensation
+Concession (land)
+Conflict
+Conflict of interest
+contract farming
+Control rights
+Customary land rights
+customary law
+decentraliztion
+Deed
+deforestation
+Desertification
+development
+development agencies
+Disturbance
+Dowry (land)
+Eminent domain
+Encroachment
+Environment
+Estate management
+Eviction
+expropriation
+extensive land use
+Extractive Industries
+Farm tenancy
+Farmers
+farmers associations
+farmers organizations
+Fisheries
+Food Security
+forest conservation
+forest grazing
+Forest law
+forest management plans
+forest monitoring and assessment
+forest regulations
+Forestry
+forestry policies
+Free trade agreements
+Gender
+Geographical information systems
+geomatics
+Governance
+Government purchases
+grazing
+Grazing contracts
+Grazing land rights
+grazing lands
+green belts
+ground rent
+Illegal occupation
+Independent experts
+indigenous lands
+Indigenous Peoples
+indigenous tenure
+Informal property
+inheritance tax
+intensive land use
+investment funds
+land access
+Land acquisition
+land administration
+land clearing
+land concentration
+land conflicts
+land consolidation
+land cover
+land cover mapping
+land degradation
+land development (urbanization)
+Land dispute
+land distribution
+land diversion
+land economics
+land environment
+land grabbing
+land grabs
+land improvement
+land information systems
+land inheritance rights
+land investments
+Land law
+Land loans
+land management
+land markets
+land policies
+land reform
+land registration
+Land rent
+Land Rights
+Land speculation
+land suitability
+land tax
+land tenure
+Land tenure system
+land transfers
+land use mapping
+land use planning
+landlessness
+landowners
+Latifundium
+legal empowerment
+lineage
+Lineage land
+Local community
+Management rights
+Manure contract
+marital property rights
+Matrilineal
+Natural Resource Management
+nature reserves
+Negotiated land reform
+Non indigenous peoples
+Notary
+Occupation
+Open access
+Orphans land rights
+Parcel plan
+Pastoral land rights
+Pastoral lands
+Pastoralists
+Patrilineal
+Perimeter (land)
+Personal property
+Policies and Laws
+Pre-emption rights
+Prescription
+Priest of the land
+Private forests
+private ownership
+Property law
+Property Regulation
+property rights
+protected areas
+public ownership
+rangelands
+Reforms
+Regularization of illegal occupation
+Regularization of ownership
+Research
+right of access
+Right of clearance
+Right of first occupancy
+rights in divorce
+Riparian rights
+rural areas
+Rural Development
+rural planning
+rural population
+Sacred woods
+Scale
+scrublands
+Security of tenure
+Servient tenement
+state forests
+State property
+Statute law
+suburban agriculture
+Surveyors
+sustainable land management
+Tenant farmer
+tenant\'s rights
+tenants
+Territories
+Territory
+Title deed
+Torrens system
+Town and country planning
+Trade
+Transaction costs
+Unclaimed lands
+urban areas
+urban forestry
+urban planning
+urban population
+urbanization
+Use rights
+Waste
+water management
+water management in lowland
+water management in upland
+water rights
+Willing seller
+Women
+zoning
+',
+  'word_boundaries' => 0,
+  'exact' => 0,
+  'case_sensitive' => 0,
+  'invert' => 0,
+  'word_list' => array(
+    0 => 'Advocacy',
+    1 => 'agrarian law',
+    2 => 'agrarian reform',
+    3 => 'agrarian structure',
+    4 => 'Agricultural land management',
+    5 => 'agricultural landscape',
+    6 => 'Agriculture',
+    7 => 'agroforestry systems',
+    8 => 'Agrofuel',
+    9 => 'Agropastoralism',
+    10 => 'Alienation (land)',
+    11 => 'animal husbandry',
+    12 => 'aquaculture',
+    13 => 'area',
+    14 => 'assessment',
+    15 => 'Assignment (land)',
+    16 => 'Cadastral administration',
+    17 => 'Cadastral register',
+    18 => 'Cadastre',
+    19 => 'cadastres',
+    20 => 'Capacity building',
+    21 => 'Capital value (land)',
+    22 => 'CEDAW',
+    23 => 'Climate change',
+    24 => 'co-ownership rights',
+    25 => 'Coastal area',
+    26 => 'Codification',
+    27 => 'Collateral (land)',
+    28 => 'collective ownership',
+    29 => 'Commercial Pressures on Land',
+    30 => 'common law',
+    31 => 'Common property',
+    32 => 'Common rights',
+    33 => 'Commons',
+    34 => 'Communal ownership',
+    35 => 'Communal territory',
+    36 => 'Community',
+    37 => 'community forestry',
+    38 => 'compensation',
+    39 => 'Concession (land)',
+    40 => 'Conflict',
+    41 => 'Conflict of interest',
+    42 => 'contract farming',
+    43 => 'Control rights',
+    44 => 'Customary land rights',
+    45 => 'customary law',
+    46 => 'decentraliztion',
+    47 => 'Deed',
+    48 => 'deforestation',
+    49 => 'Desertification',
+    50 => 'development',
+    51 => 'development agencies',
+    52 => 'Disturbance',
+    53 => 'Dowry (land)',
+    54 => 'Eminent domain',
+    55 => 'Encroachment',
+    56 => 'Environment',
+    57 => 'Estate management',
+    58 => 'Eviction',
+    59 => 'expropriation',
+    60 => 'extensive land use',
+    61 => 'Extractive Industries',
+    62 => 'Farm tenancy',
+    63 => 'Farmers',
+    64 => 'farmers associations',
+    65 => 'farmers organizations',
+    66 => 'Fisheries',
+    67 => 'Food Security',
+    68 => 'forest conservation',
+    69 => 'forest grazing',
+    70 => 'Forest law',
+    71 => 'forest management plans',
+    72 => 'forest monitoring and assessment',
+    73 => 'forest regulations',
+    74 => 'Forestry',
+    75 => 'forestry policies',
+    76 => 'Free trade agreements',
+    77 => 'Gender',
+    78 => 'Geographical information systems',
+    79 => 'geomatics',
+    80 => 'Governance',
+    81 => 'Government purchases',
+    82 => 'grazing',
+    83 => 'Grazing contracts',
+    84 => 'Grazing land rights',
+    85 => 'grazing lands',
+    86 => 'green belts',
+    87 => 'ground rent',
+    88 => 'Illegal occupation',
+    89 => 'Independent experts',
+    90 => 'indigenous lands',
+    91 => 'Indigenous Peoples',
+    92 => 'indigenous tenure',
+    93 => 'Informal property',
+    94 => 'inheritance tax',
+    95 => 'intensive land use',
+    96 => 'investment funds',
+    97 => 'land access',
+    98 => 'Land acquisition',
+    99 => 'land administration',
+    100 => 'land clearing',
+    101 => 'land concentration',
+    102 => 'land conflicts',
+    103 => 'land consolidation',
+    104 => 'land cover',
+    105 => 'land cover mapping',
+    106 => 'land degradation',
+    107 => 'land development (urbanization)',
+    108 => 'Land dispute',
+    109 => 'land distribution',
+    110 => 'land diversion',
+    111 => 'land economics',
+    112 => 'land environment',
+    113 => 'land grabbing',
+    114 => 'land grabs',
+    115 => 'land improvement',
+    116 => 'land information systems',
+    117 => 'land inheritance rights',
+    118 => 'land investments',
+    119 => 'Land law',
+    120 => 'Land loans',
+    121 => 'land management',
+    122 => 'land markets',
+    123 => 'land policies',
+    124 => 'land reform',
+    125 => 'land registration',
+    126 => 'Land rent',
+    127 => 'Land Rights',
+    128 => 'Land speculation',
+    129 => 'land suitability',
+    130 => 'land tax',
+    131 => 'land tenure',
+    132 => 'Land tenure system',
+    133 => 'land transfers',
+    134 => 'land use mapping',
+    135 => 'land use planning',
+    136 => 'landlessness',
+    137 => 'landowners',
+    138 => 'Latifundium',
+    139 => 'legal empowerment',
+    140 => 'lineage',
+    141 => 'Lineage land',
+    142 => 'Local community',
+    143 => 'Management rights',
+    144 => 'Manure contract',
+    145 => 'marital property rights',
+    146 => 'Matrilineal',
+    147 => 'Natural Resource Management',
+    148 => 'nature reserves',
+    149 => 'Negotiated land reform',
+    150 => 'Non indigenous peoples',
+    151 => 'Notary',
+    152 => 'Occupation',
+    153 => 'Open access',
+    154 => 'Orphans land rights',
+    155 => 'Parcel plan',
+    156 => 'Pastoral land rights',
+    157 => 'Pastoral lands',
+    158 => 'Pastoralists',
+    159 => 'Patrilineal',
+    160 => 'Perimeter (land)',
+    161 => 'Personal property',
+    162 => 'Policies and Laws',
+    163 => 'Pre-emption rights',
+    164 => 'Prescription',
+    165 => 'Priest of the land',
+    166 => 'Private forests',
+    167 => 'private ownership',
+    168 => 'Property law',
+    169 => 'Property Regulation',
+    170 => 'property rights',
+    171 => 'protected areas',
+    172 => 'public ownership',
+    173 => 'rangelands',
+    174 => 'Reforms',
+    175 => 'Regularization of illegal occupation',
+    176 => 'Regularization of ownership',
+    177 => 'Research',
+    178 => 'right of access',
+    179 => 'Right of clearance',
+    180 => 'Right of first occupancy',
+    181 => 'rights in divorce',
+    182 => 'Riparian rights',
+    183 => 'rural areas',
+    184 => 'Rural Development',
+    185 => 'rural planning',
+    186 => 'rural population',
+    187 => 'Sacred woods',
+    188 => 'Scale',
+    189 => 'scrublands',
+    190 => 'Security of tenure',
+    191 => 'Servient tenement',
+    192 => 'state forests',
+    193 => 'State property',
+    194 => 'Statute law',
+    195 => 'suburban agriculture',
+    196 => 'Surveyors',
+    197 => 'sustainable land management',
+    198 => 'Tenant farmer',
+    199 => 'tenant\'s rights',
+    200 => 'tenants',
+    201 => 'Territories',
+    202 => 'Territory',
+    203 => 'Title deed',
+    204 => 'Torrens system',
+    205 => 'Town and country planning',
+    206 => 'Trade',
+    207 => 'Transaction costs',
+    208 => 'Unclaimed lands',
+    209 => 'urban areas',
+    210 => 'urban forestry',
+    211 => 'urban planning',
+    212 => 'urban population',
+    213 => 'urbanization',
+    214 => 'Use rights',
+    215 => 'Waste',
+    216 => 'water management',
+    217 => 'water management in lowland',
+    218 => 'water management in upland',
+    219 => 'water rights',
+    220 => 'Willing seller',
+    221 => 'Women',
+    222 => 'zoning',
+    223 => '',
+  ),
+  'regex' => FALSE,
+  'func' => 'mb_stripos',
+);
+$feeds_tamper->weight = 10;
+$feeds_tamper->description = 'Keyword filter';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-strip_tags';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'strip_tags';
+$feeds_tamper->settings = array(
+  'allowed_tags' => '',
+);
+$feeds_tamper->weight = 5;
+$feeds_tamper->description = 'Strip tags';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_5-trim';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:5';
+$feeds_tamper->plugin_id = 'trim';
+$feeds_tamper->settings = array(
+  'mask' => '',
+  'side' => 'trim',
+);
+$feeds_tamper->weight = 9;
+$feeds_tamper->description = 'Trim';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_7-required';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:7';
+$feeds_tamper->plugin_id = 'required';
+$feeds_tamper->settings = array(
+  'invert' => 0,
+  'log' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Required field';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_8-required';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:8';
+$feeds_tamper->plugin_id = 'required';
+$feeds_tamper->settings = array(
+  'invert' => 0,
+  'log' => 0,
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Required field';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
+
+$feeds_tamper = new stdClass();
+$feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+$feeds_tamper->api_version = 2;
+$feeds_tamper->id = 'world_bank_importer-xpathparser_9-timetodate';
+$feeds_tamper->importer = 'world_bank_importer';
+$feeds_tamper->source = 'xpathparser:9';
+$feeds_tamper->plugin_id = 'timetodate';
+$feeds_tamper->settings = array(
+  'date_format' => 'm-d-Y',
+);
+$feeds_tamper->weight = 0;
+$feeds_tamper->description = 'Unix timestamp to Date';
+
+$export[$feeds_tamper->id] = $feeds_tamper;
